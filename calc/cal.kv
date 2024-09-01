@@ -1,0 +1,159 @@
+#: import utils kivy.utils
+<cal>
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+
+        TextInput:
+            id:cal_input
+            text:"0"
+            halign:"left"
+            font_size:50
+            size_hint:(1,.15)
+
+        GridLayout:
+            cols:4
+            rows:5
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"x²"
+                background_color:utils.get_color_from_hex("#97ccc6")
+                on_press:root.pow()
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"CE"
+                background_color:utils.get_color_from_hex("#97ccc6")
+                on_press:root.de()
+
+            Button:
+                id:clear
+                size_hint:(.2,.2)
+                font_size:30
+                text:"C"
+                background_color:utils.get_color_from_hex("#97ccc6")
+                on_press:root.clear()
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"/"
+                background_color:utils.get_color_from_hex("#97ccc6")
+                on_press:root.div()
+
+            Button:
+                # id:click_buttun
+                size_hint:(.2,.2)
+                font_size:30
+                text:"7"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(7)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"8"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(8)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"9"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(9)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"x"
+                background_color:utils.get_color_from_hex("#97ccc6")
+                on_press:root.multi()
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"4"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(4)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"5"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(5)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"6"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(6)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"-"
+                background_color:utils.get_color_from_hex("#97ccc6")
+                on_press:root.min()
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"1"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(1)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"2"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(2)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"3"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.click_buttun(3)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"+"
+                background_color:utils.get_color_from_hex("#97ccc6")
+                on_press:root.add()
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"+/-"
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.det()
+
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                background_color:utils.get_color_from_hex("#5f949e")
+                text:"0"
+                on_press:root.click_buttun(0)
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                text:"."
+                background_color:utils.get_color_from_hex("#5f949e")
+                on_press:root.dot()
+
+            Button:
+                size_hint:(.2,.2)
+                font_size:30
+                background_color:utils.get_color_from_hex("#3ddbca")
+                text:"="
+                on_press:root.eq()
